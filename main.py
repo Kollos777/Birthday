@@ -19,14 +19,10 @@ def get_birthdays_per_week(users):
 
         birthday_day_of_week = user_birthday.strftime('%A')
 
-        if  birthday_day_of_week in ["Saturday","Sunday"]:
+        if birthday_day_of_week in ["Saturday", "Sunday"]:
             birthday_day_of_week = "Monday"
-        
-        birthdays_per_week[birthday_day_of_week].append(user["name"])
-        print(birthday_day_of_week)
 
-        
-        
+        birthdays_per_week[birthday_day_of_week].append(user["name"])
 
     return birthdays_per_week
 
